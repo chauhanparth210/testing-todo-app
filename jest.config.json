@@ -1,0 +1,9 @@
+{
+  "roots": ["./src"],
+  "verbose": true,
+  "moduleFileExtensions": ["js"],
+  "setupFilesAfterEnv": ["./src/setupTests.js"],
+  "moduleNameMapper": {
+    "\\.(css|scss|less)$": "identity-obj-proxy"
+  }
+}
