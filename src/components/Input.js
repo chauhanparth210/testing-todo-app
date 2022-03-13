@@ -4,13 +4,13 @@ export const Input = ({ addTodo }) => {
   const [input, setInput] = useState("");
 
   const submitHandler = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     addTodo(input);
     setInput("");
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form className="input-form" onSubmit={submitHandler}>
       <input
         type="text"
         value={input}
