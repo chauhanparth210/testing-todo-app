@@ -10,10 +10,10 @@ function App() {
   };
 
   return (
-    <>
+    <div className="todo-app">
       <Input addTodo={addTodo} />
       <Todos todos={todos} />
-    </>
+    </div>
   );
 }
 

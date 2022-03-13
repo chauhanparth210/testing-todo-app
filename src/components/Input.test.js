@@ -22,8 +22,7 @@ describe("Input Component testing", () => {
     expect(inputElement.props().value).toBe("hello");
   });
 
-  it("click on `add todo` button", () => {
-
+  it("adding a single todo item", () => {
     const addTodoMockFn = jest.fn();
     wrapper = shallow(<Input addTodo={addTodoMockFn} />);
 
@@ -39,7 +38,7 @@ describe("Input Component testing", () => {
     inputElement = wrapper.find("input[type='text']");
     expect(inputElement.props().value).toBe("hello");
 
-    // press `Enter` or click on `add todo` button  
+    // press `Enter` or click on `add todo` button
     formElement.simulate("submit", {
       preventDefault: () => {},
     });
@@ -48,7 +47,7 @@ describe("Input Component testing", () => {
 
     expect(inputElement.props().value).toBe("");
 
-    jest.useFakeTimers()
+    jest.useFakeTimers();
 
     setTimeout(() => {
       expect(addTodoMockFn).toBeCalled();

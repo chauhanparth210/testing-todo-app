@@ -1,11 +1,12 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import App from "./App";
 
-// describe("App component render", () => {
-//   it("should contain text `learn react`", () => {
-//     const component = shallow(<App debug />);
-//     const linkElementText = component.find(".App-link").text();
-//     expect(linkElementText).toMatch(/learn react/i);
-//   });
-// });
+describe("App component testing", () => {
+  let wrapper;
+
+  it("should render App component", () => {
+    wrapper = mount(<App />);
+    expect(wrapper.exists()).toBeTruthy();
+  });
+});
