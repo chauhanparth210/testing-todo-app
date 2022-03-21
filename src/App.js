@@ -9,10 +9,14 @@ function App() {
     setTodos([...todos, todo]);
   };
 
+  const removeTodo = (todo) => {
+    setTodos((prevTodos) => prevTodos.filter((item) => item !== todo));
+  };
+
   return (
     <div className="todo-app">
       <Input addTodo={addTodo} />
-      <Todos todos={todos} />
+      <Todos todos={todos} removeTodo={removeTodo} />
     </div>
   );
 }

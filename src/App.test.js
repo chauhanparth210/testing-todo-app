@@ -5,7 +5,6 @@ import App from "./App";
 describe("App component testing", () => {
   let wrapper;
   const todoValue = "I need to poo 💩";
-
   beforeEach(() => {
     wrapper = mount(<App />);
     expect(wrapper.exists()).toBeTruthy();
@@ -24,7 +23,7 @@ describe("App component testing", () => {
 
     it(`the input value changes to ${todoValue}`, () => {
       const inputElement = wrapper.find("input[type='text']");
-      expect(inputElement.props().value).toBe(todoValue);
+      expect(inputElement.props().value).toBe(`${todoValue}`);
     });
   });
 
@@ -51,7 +50,14 @@ describe("App component testing", () => {
 
       it(`the todovalue is  ${todoValue}`, () => {
         const todoList = wrapper.find(".todos");
-        expect(todoList.text()).toBe(todoValue);
+        expect(todoList.text()).toBe(todoValue + "x");
+      });
+
+      it("clicking on removeTodo button", () => {
+        const removeTodoBtnElement = wrapper.find(".todos>li>button");
+        removeTodoBtnElement.simulate("click");
+        let todosListElmt = wrapper.find(".todos");
+        expect(todosListElmt.find("ul").children()).toHaveLength(0);
       });
     });
   });
