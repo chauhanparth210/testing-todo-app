@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Input } from "./components/Input";
-import { Todos } from "./components/Todos";
+import { Input } from "./components/input/Input";
+import { Todos } from "./components/todos/Todos";
 
 function App() {
   const [todos, setTodos] = useState([]);

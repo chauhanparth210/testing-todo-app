@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component testing \`then\` the form can be submitted when the form is submitted should render App component after deleting single todo 1`] = `ReactWrapper {}`;
+
+exports[`App component testing \`then\` the form can be submitted when the form is submitted should render App component with one todo item 1`] = `ReactWrapper {}`;
+
+exports[`App component testing should render App component properly 1`] = `ReactWrapper {}`;

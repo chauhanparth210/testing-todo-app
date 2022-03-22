@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todos component testing should render Todos component properly 1`] = `ShallowWrapper {}`;
+
+exports[`Todos component testing should render Todos component properly with todos prop 1`] = `ShallowWrapper {}`;
