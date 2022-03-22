@@ -1,5 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Todos component testing should render Todos component properly 1`] = `ShallowWrapper {}`;
+exports[`Todos component testing should render Todos component properly 1`] = `
+<ul
+  className="todos"
+/>
+`;
 
-exports[`Todos component testing should render Todos component properly with todos prop 1`] = `ShallowWrapper {}`;
+exports[`Todos component testing should render Todos component properly with todos prop 1`] = `
+<ul
+  className="todos"
+>
+  <li>
+    hello
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "marginLeft": "8px",
+        }
+      }
+    >
+      x
+    </button>
+  </li>
+  <li>
+    I need to poo 💩
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "marginLeft": "8px",
+        }
+      }
+    >
+      x
+    </button>
+  </li>
+</ul>
+`;

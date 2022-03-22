@@ -1,5 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
+import TestRenderer from 'react-test-renderer';
 import { Todos } from "./Todos";
 
 describe("Todos component testing", () => {
@@ -11,12 +12,13 @@ describe("Todos component testing", () => {
   });
 
   it("should render Todos component properly", () => {
-    expect(wrapper).toMatchSnapshot();
+    const testRenderer = TestRenderer.create(<Todos debug />);
+    expect(testRenderer).toMatchSnapshot();
   });
 
   it("should render Todos component properly with todos prop",()=>{
     const todos = ["hello","I need to poo 💩"]
-     wrapper = shallow(<Todos todos={todos} />);  
+     wrapper = TestRenderer.create(<Todos todos={todos} />);  
     expect(wrapper).toMatchSnapshot();
   })
 

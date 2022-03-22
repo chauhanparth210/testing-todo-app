@@ -1,5 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
+import TestRenderer from 'react-test-renderer';
 import App from "./App";
 
 describe("App component testing", () => {
@@ -11,7 +12,8 @@ describe("App component testing", () => {
   });
 
   it("should render App component properly",()=>{
-    expect(wrapper).toMatchSnapshot();
+    const testRenderer = TestRenderer.create(<App />);
+    expect(testRenderer).toMatchSnapshot();
   })
 
   // it("initially input should be empty", () => {
@@ -58,7 +60,8 @@ describe("App component testing", () => {
       // });
 
       it("should render App component with one todo item",()=>{
-        expect(wrapper).toMatchSnapshot();
+        const testRenderer = TestRenderer.create(<App />);
+        expect(testRenderer).toMatchSnapshot();
       })
 
       it("clicking on removeTodo button", () => {
@@ -69,7 +72,8 @@ describe("App component testing", () => {
       });
 
       it("should render App component after deleting single todo",()=>{
-        expect(wrapper).toMatchSnapshot();
+        const testRenderer = TestRenderer.create(<App />);
+        expect(testRenderer).toMatchSnapshot();
       })
     });
   });

@@ -1,5 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
+import TestRenderer from 'react-test-renderer';
 import { Input } from "./Input";
 
 describe("Input Component testing", () => {
@@ -11,7 +12,8 @@ describe("Input Component testing", () => {
   });
 
   it("should render Input component properly", () => {
-    expect(wrapper).toMatchSnapshot();
+    const testRenderer = TestRenderer.create(<Input />);
+    expect(testRenderer).toMatchSnapshot();
   });
 
   // it("change input values", () => {

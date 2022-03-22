@@ -14,7 +14,7 @@ function App() {
   };
 
   return (
-    <div className="todo-app">
+    <div className="todo-application">
       <Input addTodo={addTodo} />
       <Todos todos={todos} removeTodo={removeTodo} />
     </div>
